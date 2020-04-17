@@ -1,0 +1,16 @@
+{
+  "name": "num-to-words-convertor",
+  "version": "1.0.0",
+  "description": "Converts numbers to words",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive",
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "Chloe Acheampong",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  }
+}
