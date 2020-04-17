@@ -6,20 +6,20 @@ This program is designed to convert number into words.
 # Assumptions
 There are a number of assumptions made below for the number convetor. 
 
-### No negative numbers are allowed 
+1. No negative numbers are allowed 
 
-### Number Input is invalid if any character is attached to it. For example #23434, $94
+2. Number Input is invalid if any character is attached to it. For example #23434, $94
 
-### Multiple separate numbers in a one line input is treated as invalid eg. 23 34
+3. Multiple separate numbers in a one line input is treated as invalid eg. 23 34
 
-### This program runs up to a billion numbers provided as input
+4. This program runs up to a billion numbers provided as input
 
 # Running program
 
-#### Install node and run `npm install`. 
-#### Run `npm start`
+1. Install node and run `npm install`. 
+2.  Run `npm start`
 
 # Running test
 
-#### Install node (Only required if node not already installed) and run `npm install`. 
-#### Run `npm test`
+1. Install node (Only required if node not already installed) and run `npm install`. 
+2. Run `npm test`
