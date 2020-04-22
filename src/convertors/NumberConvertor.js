@@ -15,9 +15,11 @@ const invalidInput  = "number invalid";
 
 
 const convertToWords =  (stringValue) => {
+
     if (typeof stringValue != "string") {
         return invalidInput;
     }
+
     let stringValueArray = stringValue.trim().split(" ");
     let numberToConvert = "";
     var numberInvalid = "";
@@ -60,28 +62,41 @@ const numToWords =  (numb) => {
         return invalidInput;
     }
     
-    if (numb == 0 || numb < 0) {
-        return "";
+    if (numb == 0) {
+        return MapUnitToWords[numb];
     }
-    
+
+    if (numb < 0) {
+        let numStr = numb.toString().substring(1);
+        words += "minus " + numToWords(Number(numStr));
+    }
     // check if number is in 1 billions
     if (~~(numb / billion) > 0) {
-        words += numToWords(~~(numb / billion)) + " billion ";
+        words += numToWords(~~(numb / billion)) + " billion";
         numb %= billion;
     }
     // check if number is in 1 millions
     if (~~(numb / million) > 0) {
-        words += numToWords(~~(numb / million)) + " million ";
+        if (words != "") {
+            words += ", "
+        }
+        words += numToWords(~~(numb / million)) + " million";
         numb %= million;
     }
     // check if number is in thousands
     if (~~(numb / thousand) > 0) {
-        words += numToWords(~~(numb / thousand)) + " thousand ";
+        if (words != "") {
+            words += ", "
+        }
+        words += numToWords(~~(numb / thousand)) + " thousand";
         numb %= thousand;
     }
     // check if number is in hundreds
     if (~~(numb / hundred) > 0) {
-        words += numToWords(~~(numb / hundred)) + " hundred ";
+        if (words != "") {
+            words += ", "
+        }
+        words += numToWords(~~(numb / hundred)) + " hundred";
         numb %= hundred;
 
     }
@@ -89,7 +104,7 @@ const numToWords =  (numb) => {
     if (numb > 0) {
         
         if (words != "") {
-            words += "and "
+            words += " and "
         }
         
         // check if number is within tens 
