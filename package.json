@@ -1,13 +1,16 @@
 {
   "name": "number-to-words-convertor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Converts numbers to words",
   "main": "index.js",
   "scripts": {
     "test": "mocha --recursive",
-    "start": "node src/index.js"
+    "start": "node index.js"
   },
-  "keywords": ["number-convertor", "number-to-english-words"],
+  "keywords": [
+    "number-convertor",
+    "number-to-english-words"
+  ],
   "author": "Cank Coder",
   "license": "ISC",
   "devDependencies": {
