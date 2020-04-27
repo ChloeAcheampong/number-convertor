@@ -4,20 +4,31 @@ var convertors = require('./convertors/NumberConvertor');
 
 var filename = __dirname +'/resources/number_convertor.txt'
 
-var rd = readline.createInterface({
-    input: fs.createReadStream(filename),
-    output: process.stdoutss
-});
+readFromFile(filename);
 
 
-console.log('=================================================');
+function readFromFile(filename){
+    console.log('===================== Reading from file example ============================');
+    let rd = readline.createInterface({
+        input: fs.createReadStream(filename),
+        output: process.stdoutss
+    });
+    
+    rd.on('line', function(line) {
+       console.log(`Read:  ${line}`);
+       let result =  convertors.convertToWords(line);
+       console.log(`Result:  ${result}`);
+    
+    });
+}
 
-rd.on('line', function(line) {
-   console.log(`Read:  ${line}`);
-   let result =  convertors.convertToWords(line);
-   console.log(`Result:  ${result}`);
+function convertNumberToWords(stringParam) {
+    return convertors.convertToWords(stringParam)
+    
+}
 
-});
-
+exports = {
+    convertNumberToWords
+}
 
 

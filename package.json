@@ -1,5 +1,5 @@
 {
-  "name": "num-to-words-convertor",
+  "name": "number-to-words-convertor",
   "version": "1.0.0",
   "description": "Converts numbers to words",
   "main": "index.js",
@@ -7,8 +7,8 @@
     "test": "mocha --recursive",
     "start": "node src/index.js"
   },
-  "keywords": [],
-  "author": "Chloe Acheampong",
+  "keywords": ["number-convertor", "number-to-english-words"],
+  "author": "Cank Coder",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^7.1.1"
