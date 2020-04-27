@@ -6,8 +6,6 @@ This program is designed to convert number into words.
 # Assumptions
 There are a number of assumptions made below for the number convetor. 
 
-//1. No negative numbers are allowed 
-
 1. Number Input is invalid if any character is attached to it. For example #23434, $94
 
 2. Multiple separate numbers in a one line input is treated as invalid eg. 23 34
@@ -21,5 +19,5 @@ There are a number of assumptions made below for the number convetor.
 
 # Running test
 
-1. Install node (Only required if node not already installed) and run `npm install`. 
+1. Install nodejs (Only required if node not already installed) and run `npm install`. 
 2. Run `npm test`
