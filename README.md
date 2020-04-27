@@ -12,10 +12,17 @@ There are a number of assumptions made below for the number convetor.
 
 3. This program runs up to a billion numbers provided as input
 
-# Running program
+# Usage
 
 1. Install node and run `npm install`. 
-2.  Run `npm start`
+2. npm i number-to-words-convertor
+3. Try it: 
+    ```
+        var convertors = require('number-to-words-convertor');
+
+        console.log(convertors.convertNumberToWords("1243"));
+
+    ```
 
 # Running test
 
