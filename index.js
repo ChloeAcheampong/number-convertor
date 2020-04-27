@@ -2,13 +2,8 @@ var fs = require('fs'),
 readline = require('readline');
 var convertors = require('./src/convertors/NumberConvertor');
 
-var filename = __dirname +'/resources/number_convertor.txt'
 
-readFromFile(filename);
-
-
-function readFromFile(filename){
-    console.log('===================== Reading from file example ============================');
+function convertNumberToWordsReadFromFile(filename = __dirname +'/resources/number_convertor.txt'){
     let rd = readline.createInterface({
         input: fs.createReadStream(filename),
         output: process.stdoutss
@@ -28,7 +23,8 @@ function convertNumberToWords(stringParam) {
 }
 
 module.exports = {
-    convertNumberToWords
+    convertNumberToWords,
+    convertNumberToWordsReadFromFile
 }
 
 
